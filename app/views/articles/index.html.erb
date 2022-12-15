@@ -9,7 +9,9 @@ Our blog has total number of content is :<%= Article.public_count%>
   <% @articles.each do |article| %>
   <% unless article.archived? %>
     <li>
-      <%= link_to article.title, article %>
+      <%= link_to article.title, article %> ||
+      <%= article.id %>||
+      <%= article.age%>
     </li>
     <% end %>
   <% end %>
